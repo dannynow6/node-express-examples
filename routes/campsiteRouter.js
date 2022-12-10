@@ -27,17 +27,17 @@ campsiteRouter.route('/:campsiteId')
     res.setHeader('Content-Type', 'text/plain');
     next();
 })
-.get('/:campsiteId', (req, res) => {
+.get((req, res) => {
     res.end(`Will send campsite with id: ${res.body.id}`);
 })
-.post('/:campsiteId', (req, res) => {
+.post((req, res) => {
     res.end(`Will add the campsite: ${req.body.name} with description: ${req.body.description}`); 
 })
-.put('/:campsiteId', (req, res) => {
+.put((req, res) => {
     res.statusCode = 403;
     res.end('PUT operation not supported on /campsites'); 
 })
-.delete('/:campsiteId', (req, res) => {
+.delete((req, res) => {
     res.end(`Deleting campsite with id: ${req.body.id}`); 
 });
 
