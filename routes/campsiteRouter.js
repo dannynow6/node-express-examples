@@ -28,7 +28,7 @@ campsiteRouter.route('/:campsiteId')
     next();
 })
 .get((req, res) => {
-    res.end(`Will send details of the campsite: ${req.params.campsiteId} to you`);
+    res.end(`Will send details of the campsite with id: ${req.params.campsiteId} to you`);
 })
 .post((req, res) => {
     res.statusCode = 403;
